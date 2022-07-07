@@ -1,0 +1,49 @@
+Project HSX {
+    database_type: 'PostgreSQL'
+    Note: 'HSX'
+}
+// KO VIET HOA TEN BANG, TEN COLUMNS
+// null, non-null
+// primary key
+// logic test date > ngay thanh lap ck 
+// logic test case
+Table stocks_delisted {
+    ticker varchar 
+    isin_code varchar(12)
+    figi_code varchar(12)
+    company_name text [ unique, not null ]
+    cancel_at date
+    registration_volume bigint
+    note: " "
+}
+
+Table stocks_new_listing {
+    ticker varchar
+    isin_code varchar (12)
+    figi_code varchar (12)
+    company_name text
+    adress text
+    submission_date date
+    accepted_date date
+    first_trading_date date 
+    registration_volume bigint
+}
+
+Table cw_new_listing {
+    issuer varchar
+    cw_name varchar (255) [primary key]
+    registration_vol integer
+    conversion_ratio varchar
+    submission_date date
+    acceptedon date
+    1sttrading_date date 
+    maturity_date date
+    note: "not relevant to others"
+}
+// Enum post_status {
+// draft
+// published
+// private [note: 'visible via URL only']
+// }
+
+// ref for these tables in meaningless 
