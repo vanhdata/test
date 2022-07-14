@@ -40,7 +40,7 @@ for a in range(int(result['total'])):
 print(pd.DataFrame(dataset).iloc[:,0])
 print(pd.DataFrame(DATASET))
 print('-------------------')
-dataset2 = pd.DataFrame(DATASET, columns=['id','stt','tickers','isin','figi','company_name','address','regist_date','regist_volume'])
+dataset2 = pd.DataFrame(DATASET, columns=['id','stt','tickers','isin','figi','company_name','address','submission_date','regist_volume'])
 # change datatype from object to fit in columns
     # dataset2.astype({0:'int32'}).dtypes
 dataset2.info()
@@ -51,6 +51,7 @@ print(dataset2.dtypes)
 #  dataset2.apply(np.sum, axis=6)
 dataset2.iloc[7]
 dataset2.iloc[7][6]
+
 
 
 

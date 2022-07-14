@@ -47,7 +47,7 @@ for i in range(int(resul['total'])) :
 nice = pd.DataFrame(dataset)
 print(nice)
 print('-------------------')
-dataset2 = pd.DataFrame(DATASET, columns=['stt','tickers_href','isin','figi','company_name','delist_date','volume'])
+dataset2 = pd.DataFrame(DATASET, columns=['No','tickers_href','isin','figi','company_name','delist_date','volume'])
 # change datatype from object to fit in columns
     # dataset2.astype({0:'int32'}).dtypes
 dataset2.info()
